@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Security System WebProgRedesign</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <div class="menu-item" id="menuToggle"><img src="Images/Iconsandlogos/menuOpen.png" alt=""></div>
+            <div class="menu-item"><img src="Images/Iconsandlogos/membership.png" alt="Membership"> Membership & Coverage</div>
+            <div class="menu-item"><img src="Images/Iconsandlogos/news.png" alt="News"> News</div>
+            <div class="menu-item"><img src="Images/Iconsandlogos/agreement.png" alt="Laws"> Laws & Circulars</div>
+            <div class="menu-item"><img src="Images/Iconsandlogos/Procurement.png" alt="Procurement"> Procurement</div>
+            <div class="menu-item"><img src="Images/Iconsandlogos/careeropprtunity.png" alt="Careers"> Career Opportunities</div>
+            <div class="menu-item"><img src="Images/Iconsandlogos/aboutsss.png" alt="About"> About SSS</div>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <div class="logo">
+                    <img src="Images/Iconsandlogos/SSSLogo.png" alt="SSS Logo">
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search">
+                </div>
+                <div class="portals">
+                    <select>
+                        <option>Portals ▼</option>
+                        <option>MEMBER</option>
+                        <option>EMPLOYER</option>
+                        <option>C&CP/CSP</option>
+                        <option>SBWSP</option>
+                    </select>
+                </div>
+            </div>
+            <div class="hero">
+                <img src="https://via.placeholder.com/800x400?text=SSS+at+67+Years" alt="SSS at 67 Years">
+            </div>
+            <div class="icon-grid">
+                <div class="icon-item">
+                    <img src="Images/SSS_forms/Forms_icon.png" alt="Forms">
+                    <p>Forms</p>
+                </div>
+                <div class="icon-item">
+                    <img src="Images/SSS_forms/MobileAppDownload_icon.jpg" alt="Mobile App">
+                    <p>Download the SSS Mobile App</p>
+                </div>
+                <div class="icon-item">
+                    <img src="Images/SSS_forms/foi_logo_small.png" alt="Information">
+                    <p>Information</p>
+                </div>
+                <div class="icon-item">
+                    <img src="Images/SSS_forms/R3File_icon.png" alt="My.SSS">
+                    <p>My.SSS</p>
+                </div>
+                <div class="icon-item">
+                    <img src="images/sss_forms/SSCRules_icon.png" alt="Rules of Procedure">
+                    <p>SSS Rules of Procedure</p>
+                </div>
+                <div class="icon-item">
+                    <img src="images/sss_forms/SSS-TS.png" alt="Transparency Seal">
+                    <p>Transparency Seal</p>
+                </div>
+                <div class="icon-item">
+                    <img src="images/sss_forms/benefits-calculator.png" alt="Pension Calculator">
+                    <p>Pension Calculator</p>
+                </div>
+                <div class="icon-item">
+                    <img src="images/sss_forms/branch-directory.png" alt="Branch Directory">
+                    <p>Branch Directory</p>
+                </div>
+                <div class="icon-item">
+                    <img src="images/sss_forms/SSS-CGS.png" alt="Contact Center">
+                    <p>Contact Center</p>
+                </div>
+                <div class="icon-item">
+                    <img src="images/sss_forms/citizens-charter.png" alt="Citizens Charter">
+                    <p>Citizens Charter</p>
+                </div>
+                <div class="icon-item">
+                    <img src="images/sss_forms/employment opportunities_small.png" alt="Employment Opportunities">
+                    <p>Employment Opportunities</p>
+                </div>
+                <div class="icon-item">
+                    <img src="images/sss_forms/Whistleblowing_icon.png" alt="Whistleblowing Portal">
+                    <p>Whistleblowing Portal</p>
+                </div>
+            </div>
+            <div class="footer">
+                <p>SSS Homepage Copyright © 1997 | Terms of Service | Data Privacy Notice</p>
+                <p><b>SSS Building East Avenue, Diliman Quezon City, Philippines</b></p>
+                <p>For comments, concerns and inquiries contact:</p>
+                <p>SSS Hotline: <b>1455</b></p>
+                <p>uSSSapTayo Portal: <b>crms.sss.gov.ph</b></p>
+                <p>SSS Email: <b>member_relations@sss.gov.ph</b></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+
+        menuToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('collapsed');
+        });
+
+        function adjustBackground() {
+            const img = new Image();
+            img.onload = function() {
+                const ratio = this.width / this.height;
+                const windowRatio = window.innerWidth / window.innerHeight;
+                if (ratio > windowRatio) {
+                    document.body.style.backgroundSize = 'auto 100%';
+                } else {
+                    document.body.style.backgroundSize = '100% auto';
+                }
+            }
+            img.src = document.body.style.backgroundImage.replace(/url\((['"])?(.*?)\1\)/gi, '$2').split(',')[0];
+        }
+
+        window.addEventListener('resize', adjustBackground);
+        adjustBackground();
+    </script>
+</body>
+</html>
